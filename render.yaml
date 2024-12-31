@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: osd-events-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run server
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: PORT
+        value: $PORT
+
+# just a comment to make sure it updates
